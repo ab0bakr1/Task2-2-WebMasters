@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Soft gradient */
+    color: #fff;
+    overflow: hidden;
+}
+
+header {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Input  */
+.task-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+.task-input input {
+    width: 75%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+.task-input input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+.task-input button {
+    margin-left: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    background-color: #6a82fb;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+.task-input button:hover {
+    background-color: #fc5c7d;
+    transform: scale(1.1);
+}
+
+/* Task list */
+.task-list {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Task item */
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    list-style: none;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    color: rgb(0, 0, 0);
+}
+.task-list li:hover {
+    transform: scale(1.05);
+}
+.task-list li.completed {
+    background-color: rgba(0, 255, 0, 0.2);
+    text-decoration: line-through;
+    color: #6c757d;
+}
+.task-list button {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.task-list button:hover {
+    transform: scale(1.2);
+}
+.complete-btn {
+    color: #28a745;
+}
+.edit-btn {
+    color: #ffc107;
+    padding: 0 5px;
+}
+.delete-btn {
+    color: #dc3545;
+}
